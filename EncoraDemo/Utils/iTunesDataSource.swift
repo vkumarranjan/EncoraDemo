@@ -31,16 +31,16 @@ class iTunesDataSource: XMLDelegate {
         completion - a Closure with is called once the list of iTune Items are loaded
         failure - a closure called whenever there is a error
      */
-    func songList( completion: @escaping ClosureWithBool, failure: @escaping ClosureWithError ) {
+    func songList( completion: @escaping ClosureWithiTunes, failure: @escaping ClosureWithError ) {
      
         // Load XML string for parsing
-        tuneServer.topSongXML( { xmlString in
+        tuneServer.topSongXML( {[unowned self ] xmlString in
             let xmlPathParser = XMLPathParser(xmlString: xmlString, delegate: self) // setup the XML path parser
             
             xmlPathParser.addPaths(paths: EndPoints.XMLPaths)   // Add the parsing criteria (see the XMLPathParser object)
             xmlPathParser.parse()       // parse the XML using the supplied paths
             
-            completion( true )
+            completion(self.items)
         }, failure: failure )
     }
 

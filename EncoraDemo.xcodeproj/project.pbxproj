@@ -68,6 +68,7 @@
 		A1DDB5EB25E4027E002F996F /* EncoraDemo */ = {
 			isa = PBXGroup;
 			children = (
+				A1DDB70325E55376002F996F /* iTuneViewModel */,
 				A1DDB6FF25E547B6002F996F /* Model */,
 				A1DDB60F25E4A616002F996F /* Utils */,
 				A1DDB5EC25E4027E002F996F /* AppDelegate.swift */,
@@ -99,6 +100,13 @@
 				A1DDB70025E547E1002F996F /* iTuneItem.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		A1DDB70325E55376002F996F /* iTuneViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = iTuneViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

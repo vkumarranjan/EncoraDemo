@@ -17,8 +17,8 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
       
         
-        self.dataSource.songList (completion: { (sucess) in
-          print("Sucess")
+        self.dataSource.songList (completion: { (items) in
+            print(items)
         }, failure: { error in
             print("================")
         })
