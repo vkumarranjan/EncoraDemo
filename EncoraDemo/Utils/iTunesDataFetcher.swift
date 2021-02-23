@@ -9,8 +9,6 @@ import Foundation
 import UIKit
 
 
-import Foundation
-
 typealias Closure = () -> Void
 typealias ClosureWithError = ( _ error: iTunesErrors ) -> Void
 typealias ClosureWithBool = ( _ success: Bool ) -> Void
