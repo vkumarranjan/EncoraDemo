@@ -14,6 +14,11 @@
 		A1DDB5F625E4027F002F996F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1DDB5F525E4027F002F996F /* Assets.xcassets */; };
 		A1DDB5F925E4027F002F996F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1DDB5F725E4027F002F996F /* LaunchScreen.storyboard */; };
 		A1DDB61125E4A65C002F996F /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DDB61025E4A65C002F996F /* EndPoints.swift */; };
+		A1DDB6F425E54794002F996F /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DDB6F325E54793002F996F /* Errors.swift */; };
+		A1DDB6F725E5479E002F996F /* XMLPathParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DDB6F625E5479E002F996F /* XMLPathParser.swift */; };
+		A1DDB6FA25E547A4002F996F /* iTunesDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DDB6F925E547A4002F996F /* iTunesDataFetcher.swift */; };
+		A1DDB6FD25E547AA002F996F /* iTunesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DDB6FC25E547AA002F996F /* iTunesDataSource.swift */; };
+		A1DDB70125E547E1002F996F /* iTuneItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DDB70025E547E1002F996F /* iTuneItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,11 @@
 		A1DDB5F825E4027F002F996F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A1DDB5FA25E4027F002F996F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1DDB61025E4A65C002F996F /* EndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoints.swift; sourceTree = "<group>"; };
+		A1DDB6F325E54793002F996F /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		A1DDB6F625E5479E002F996F /* XMLPathParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMLPathParser.swift; sourceTree = "<group>"; };
+		A1DDB6F925E547A4002F996F /* iTunesDataFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iTunesDataFetcher.swift; sourceTree = "<group>"; };
+		A1DDB6FC25E547AA002F996F /* iTunesDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iTunesDataSource.swift; sourceTree = "<group>"; };
+		A1DDB70025E547E1002F996F /* iTuneItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTuneItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +68,7 @@
 		A1DDB5EB25E4027E002F996F /* EncoraDemo */ = {
 			isa = PBXGroup;
 			children = (
+				A1DDB6FF25E547B6002F996F /* Model */,
 				A1DDB60F25E4A616002F996F /* Utils */,
 				A1DDB5EC25E4027E002F996F /* AppDelegate.swift */,
 				A1DDB5EE25E4027E002F996F /* SceneDelegate.swift */,
@@ -74,8 +85,20 @@
 			isa = PBXGroup;
 			children = (
 				A1DDB61025E4A65C002F996F /* EndPoints.swift */,
+				A1DDB6F325E54793002F996F /* Errors.swift */,
+				A1DDB6F625E5479E002F996F /* XMLPathParser.swift */,
+				A1DDB6F925E547A4002F996F /* iTunesDataFetcher.swift */,
+				A1DDB6FC25E547AA002F996F /* iTunesDataSource.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		A1DDB6FF25E547B6002F996F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A1DDB70025E547E1002F996F /* iTuneItem.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,7 +172,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1DDB5F125E4027E002F996F /* ViewController.swift in Sources */,
+				A1DDB6FA25E547A4002F996F /* iTunesDataFetcher.swift in Sources */,
+				A1DDB6F425E54794002F996F /* Errors.swift in Sources */,
 				A1DDB5ED25E4027E002F996F /* AppDelegate.swift in Sources */,
+				A1DDB6FD25E547AA002F996F /* iTunesDataSource.swift in Sources */,
+				A1DDB70125E547E1002F996F /* iTuneItem.swift in Sources */,
+				A1DDB6F725E5479E002F996F /* XMLPathParser.swift in Sources */,
 				A1DDB61125E4A65C002F996F /* EndPoints.swift in Sources */,
 				A1DDB5EF25E4027E002F996F /* SceneDelegate.swift in Sources */,
 			);
