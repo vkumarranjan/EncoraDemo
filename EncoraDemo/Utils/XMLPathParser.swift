@@ -51,8 +51,8 @@ class XMLPathParser: NSObject, XMLParserDelegate {
     //        Data encapulation here, no touching externally
     
     private let parser: XMLParser
-    private var userPaths = [String : (String?,Any)]() // store the path : (attribute keys?, id)
-    private var contextStack = [XMLContext]() // use to track the descent and acension into and out of element
+    private var userPaths = [String : (String?,Any)]()
+    private var contextStack = [XMLContext]()
     
     // current element being processed
     private var currentText = String()
@@ -98,35 +98,7 @@ class XMLPathParser: NSObject, XMLParserDelegate {
     //MARK: - Public section
     //
     
-    /*
-     Supply the paths of interest within the XML
-     Each node in the path is DOT ('.') delimited
-     
-     Usage Example
-     <XML>
-        <People>
-            <Name>John Doe</Name>
-            <age>25</age>
-            <address>1234 Main street</address>
-            <phone>101-555-1234</phone>
-        </People>
-     </XML>
-     
-     let parser = Parser(xmlString: xml)
-     parser.delegate = self // ensure self conforms to XMLDelegate
-     
-     parser.addPath( path: "XML.People.Name", id: 1 )
-     parser.addPath( path: "XML.People.age", id: 2 )
-     parser.addPath( path: "XML.People.address", id: 3 )
-     parser.addPath( path: "XML.People.phone", id: 4 )
-     
-     parser.parse()
-     
-     PARAMETER:
-        path - A path to add to the internal list of paths
-        id - The id of the given path, should be unique
-
-     */
+    
     func addPath( path: String, id: Any ) {
         let pathOnly = self.removeLastElement(pathString: path, at:"@")
         let attributeKeys = self.attributePath(pathString: path, at: "@")
@@ -257,15 +229,7 @@ class XMLPathParser: NSObject, XMLParserDelegate {
         return nil
     }
     
-    /*
-     Extracts the atribute portion of the pathstring
-     
-     pathString:  The path string with attibutes = Path@Key1,Key2
-     at: Separator char which should be @
-     attributes: The attributes received from the XML parser
-     
-     Returns [Key1:Value1, Key2: Value2]
-     */
+    
     private func extractAttribute( pathString: String, at: String = "@", attributes: [String:String] ) -> [String:String]? {
         if let attributePath = self.attributePath(pathString: pathString) {
             
@@ -323,10 +287,5 @@ extension XMLParserDelegate {
     func validation( _ parser: XMLPathParser, _ error: Error) {
         print( "\(#function) unimplemented" )
     }
-    
-    func parserDidEndDocument(_ parser: XMLParser) {
-        print("")
-    }
-    
 
 }

@@ -18,14 +18,14 @@ struct EndPoints {
         case entryImage
     }
     
-    static var topSong  = "https://itunes.apple.com/us/rss/topsongs/limit=2/xml"
+    static var topSong  = "https://itunes.apple.com/us/rss/topsongs/limit=20/xml"
     static var XMLPaths = [ "feed.title" : XMLItem.mainTitle
-                          , "feed.entry.id" : XMLItem.entryArt
-                          , "feed.entry.title" : XMLItem.entryName
-                          , "feed.entry.link@title,im:assetType" : XMLItem.entryPreview
-                          , "feed.entry.im:artist" : XMLItem.entryArtist
-                          , "feed.entry.im:image" : XMLItem.entryImage
-    ]
+                            , "feed.entry.id" : XMLItem.entryArt
+                            , "feed.entry.title" : XMLItem.entryName
+                            , "feed.entry.link@title,im:assetType" : XMLItem.entryPreview
+                            , "feed.entry.im:artist" : XMLItem.entryArtist
+                            , "feed.entry.im:image" : XMLItem.entryImage
+      ]
 }
 
 struct Key {

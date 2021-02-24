@@ -15,5 +15,6 @@ class iTunesItem {
     var art: String? = nil // The album info page url string
     var image: String? = nil // The album cover art url string
     var preview: String? = nil // The audio preview url string
+    var id: String? = nil
 }
 

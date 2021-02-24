@@ -8,18 +8,6 @@
 import Foundation
 import UIKit
 
-
-typealias Closure = () -> Void
-typealias ClosureWithError = ( _ error: iTunesErrors ) -> Void
-typealias ClosureWithBool = ( _ success: Bool ) -> Void
-typealias ClosureWithiTunes = ( _ items: [iTunesItem] ) -> Void
-typealias ClosureWithString = ( _ xml: String ) -> Void
-
-
-
-/* This object is response for connection and downloading the XML and images from the XML
- */
-
 class iTunesServer {
     
     //
@@ -102,10 +90,5 @@ class iTunesServer {
             self.task?.resume()
         }
     }
-
-    //
-    //MARK: - private methods section
-    //
-    
 }
 

@@ -8,14 +8,6 @@
 import Foundation
 import UIKit
 
-/* This object is designed to encapsulate the iTuneServer process
- It handle downloading and the parsing of the iTune XML file
- 
- Afterwards is makes the data available as a generic data source for use in
- UI data source like UICollectionDataSource and UITableViewDataSource, etc
- 
- This object parses the XML using a XMLPathParser.
- */
 class iTunesDataSource: XMLDelegate {
     
     //
@@ -46,16 +38,11 @@ class iTunesDataSource: XMLDelegate {
 
     /* Function to load the image from the server
      
-     This is object abstraction.
-     
-     The internal detail should not be accessible in a true object orient environment.  This
-     allows me to change the internal members without breaking the code which relies on this call.
-     
      PARAMETER:
         item - The iTunesItem with the to load
         completion - The closure which is called with the loaded image
      */
-    func loadImageFor( item: iTunesItem, completion: @escaping (_ image: UIImage) -> () ) {
+    func loadImageFor( item: Song, completion: @escaping (_ image: UIImage) -> () ) {
         if let imageURL = item.image {
             tuneServer.loadImageFor( imageURL: imageURL, completion: completion )
         } else {
@@ -88,12 +75,6 @@ class iTunesDataSource: XMLDelegate {
 
     /* Here is where the iTuneItems are populated and stored in the internal array
      
-     This call is made is there are no attributes in the element
-     
-     This function is called whenever the XML parser reaches a path specified by the
-     developer as it transverses the XML file.  The function code can easily determine the
-     data being send by it ID parameter
-     
      PARAMETERS:
         parser - The XMLPathParser object doing the work
         path - The path in the XML where this data was read
@@ -112,10 +93,6 @@ class iTunesDataSource: XMLDelegate {
     }
     
     /* Here is where the iTuneItems are populated and stored in the internal array
-     
-     This function is called whenever the XML parser reaches a path specified by the
-     developer as it transverses the XML file.  The function code can easily determine the
-     data being send by it ID parameter
      
      PARAMETERS:
         parser - The XMLPathParser object doing the work

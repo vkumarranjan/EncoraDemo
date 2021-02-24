@@ -7,6 +7,13 @@
 
 import Foundation
 
+typealias Closure = () -> Void
+typealias ClosureWithError = ( _ error: iTunesErrors ) -> Void
+typealias ClosureWithBool = ( _ success: Bool ) -> Void
+typealias ClosureWithiTunes = ( _ items: [iTunesItem] ) -> Void
+typealias ClosureWithString = ( _ xml: String ) -> Void
+
+
 enum iTunesErrors: Error {
     case unknown
     case success
