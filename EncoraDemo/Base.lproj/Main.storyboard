@@ -24,6 +24,21 @@
             </objects>
             <point key="canvasLocation" x="763.768115942029" y="50.892857142857139"/>
         </scene>
+        <!--Song DetailsVC-->
+        <scene sceneID="dUS-3V-Fbu">
+            <objects>
+                <viewController storyboardIdentifier="SongDetailsVC" id="h71-B4-TrL" customClass="SongDetailsVC" customModule="EncoraDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Hka-bt-Ebe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="atn-Rh-Kj5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xSc-IU-AVx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1791" y="63"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="lWP-r0-vXT">
             <objects>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A14B997725E6C77D0011D967 /* SongDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14B997625E6C77D0011D967 /* SongDetailsVC.swift */; };
 		A1C3295325E636AF00006CA7 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C3295225E636AF00006CA7 /* CoreDataHelper.swift */; };
 		A1C3295625E643B500006CA7 /* iTuneViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C3295525E643B500006CA7 /* iTuneViewModel.swift */; };
 		A1C3296525E6849300006CA7 /* iTuneSongTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C3296325E6849300006CA7 /* iTuneSongTableViewCell.swift */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A14B997625E6C77D0011D967 /* SongDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongDetailsVC.swift; sourceTree = "<group>"; };
 		A1C3295225E636AF00006CA7 /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 		A1C3295525E643B500006CA7 /* iTuneViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTuneViewModel.swift; sourceTree = "<group>"; };
 		A1C3296325E6849300006CA7 /* iTuneSongTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTuneSongTableViewCell.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 				A1DDB5EC25E4027E002F996F /* AppDelegate.swift */,
 				A1DDB5EE25E4027E002F996F /* SceneDelegate.swift */,
 				A1DDB5F025E4027E002F996F /* ViewController.swift */,
+				A14B997625E6C77D0011D967 /* SongDetailsVC.swift */,
 				A1DDB5F225E4027E002F996F /* Main.storyboard */,
 				A1DDB5F525E4027F002F996F /* Assets.xcassets */,
 				A1DDB5F725E4027F002F996F /* LaunchScreen.storyboard */,
@@ -230,6 +233,7 @@
 				A1C3295325E636AF00006CA7 /* CoreDataHelper.swift in Sources */,
 				A1DDB73725E5FEBC002F996F /* SongDataStore.xcdatamodeld in Sources */,
 				A1DDB6F725E5479E002F996F /* XMLPathParser.swift in Sources */,
+				A14B997725E6C77D0011D967 /* SongDetailsVC.swift in Sources */,
 				A1DDB61125E4A65C002F996F /* EndPoints.swift in Sources */,
 				A1DDB5EF25E4027E002F996F /* SceneDelegate.swift in Sources */,
 			);

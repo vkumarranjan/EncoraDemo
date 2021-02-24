@@ -68,23 +68,15 @@ class iTuneSongTableViewCell : UITableViewCell {
     func setup() {
         addSubview(songImageView)
         addSubview(songTitle)
-        
-        let const: CGFloat = 2.0
-        
-        songImageView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: const).isActive = true
-        songImageView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 10).isActive = true
-        songImageView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -const).isActive = true
-        songImageView.trailingAnchor.constraint(equalTo: songTitle.leadingAnchor, constant: -const).isActive = true
+                
+        songImageView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 20).isActive = true
         songImageView.widthAnchor.constraint(equalToConstant: 44).isActive = true
         songImageView.heightAnchor.constraint(equalToConstant: 44).isActive = true
         songImageView.centerYAnchor.constraint(equalTo: self.contentView.centerYAnchor).isActive = true
 
-        
-        songTitle.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: const).isActive = true
-        songTitle.leadingAnchor.constraint(equalTo: songImageView.trailingAnchor, constant: -20).isActive = true
-        songTitle.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -const).isActive = true
-        songTitle.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -const).isActive = true
-        
+        songTitle.leadingAnchor.constraint(equalTo: songImageView.trailingAnchor, constant: 10).isActive = true
+        songTitle.centerYAnchor.constraint(equalTo: self.songImageView.centerYAnchor).isActive = true
+
 
 
     }
