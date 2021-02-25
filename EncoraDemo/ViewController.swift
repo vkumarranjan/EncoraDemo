@@ -20,6 +20,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
       
+        
+        
         let paths = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)
         print(paths[0])
         self.navigationController?.navigationBar.prefersLargeTitles = true
@@ -49,7 +51,7 @@ class ViewController: UIViewController {
             tableView.rowHeight = 60 ///UITableView.automaticDimension
             tableView.separatorStyle = .singleLine
             tableView.dataSource = viewModel
-            tableView.delegate = viewModel
+            tableView.delegate = self
             tableView.register(iTuneSongTableViewCell.self, forCellReuseIdentifier: iTuneSongTableViewCell.cellId)
             
         }
@@ -67,3 +69,24 @@ class ViewController: UIViewController {
 }
 
 
+
+
+extension ViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let songMo = self.viewModel.songsArray[indexPath.row]
+        self.performSegue(withIdentifier: Key.detailSegue, sender: songMo)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let songMo = sender as! Song
+        
+        if let iTuneDetailVc = segue.destination as? SongDetailsVC {
+            iTuneDetailVc.songMo = songMo
+            
+        } else {
+            print( "Error finding the DetailViewController" )
+        }
+    }
+    
+}

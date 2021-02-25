@@ -26,8 +26,3 @@ extension iTuneViewModel: UITableViewDataSource {
     }
     
 }
-
-extension iTuneViewModel: UITableViewDelegate {
-    
-}
-

@@ -41,8 +41,8 @@ class iTuneSongTableViewCell : UITableViewCell {
     
     private var songTitle: UILabel = {
         let lbl = UILabel()
-        lbl.textColor = .black
-        lbl.text = "12wwww"
+        lbl.textColor = .gray
+        lbl.text = "NA"
         lbl.font = UIFont.boldSystemFont(ofSize: 20)
         lbl.textAlignment = .left
         lbl.numberOfLines = 0
