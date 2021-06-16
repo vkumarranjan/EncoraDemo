@@ -30,17 +30,9 @@ class ViewController: UIViewController {
         self.setupTableView()
         
         self.viewModel.reloadTableToController = { 
-            print("888888888888888888888888888888")
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
-        }
-    }
-
-    //reload table view
-    func reloadTableView() {
-        DispatchQueue.main.async {
-            self.tableView.reloadData()
         }
     }
     
